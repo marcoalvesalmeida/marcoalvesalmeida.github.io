@@ -4,7 +4,7 @@
     <script src="artyom.js"></script>
     <script src="artyom.window.js"></script>
 </head>
-<body>
+<body background="https://media.giphy.com/media/AsN7cyg5svWsE/giphy.gif">
 <span id="textout">
 
 </span>
@@ -22,8 +22,26 @@
         indexes: ["Olá","Bom dia"],
         action: function(i){
             if(i==0){
-                artyom.sayRandom(["Oi","Tudo ok","Estava te esperando"]);
+                artyom.sayRandom(["Oi","Tudo ok","Estava te esperando Marco"]);
             }else if(i==1){
+                artyom.say("Bom dia!",{
+                    onStart:function(){
+                        artyom.fatality();
+                        artyom.dontObey();
+                    },
+                    onEnd: function(){
+                        artyom.initialize(config);
+                    }
+                });
+            }
+        }
+    };
+     var funcNome = {
+        indexes: ["Como é seu nome","Como você se chama", "seu nome", "quem é você"],
+        action: function(i){
+            if(i==0 || i==1 || i==2 || i==3){
+                artyom.sayRandom(["Eu sou a Samantha","As pessoas me chamam de Samantha","Bond, Samantha Bond"]);
+            }else if(i=6){
                 artyom.say("Bom dia!",{
                     onStart:function(){
                         artyom.fatality();
