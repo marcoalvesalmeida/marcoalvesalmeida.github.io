@@ -4,7 +4,7 @@
     <script src="artyom.js"></script>
     <script src="artyom.window.js"></script>
 </head>
-<body background="https://media.giphy.com/media/AsN7cyg5svWsE/giphy.gif">
+<body background="samantha_user.jpg">
 <span id="textout">
 
 </span>
@@ -54,6 +54,24 @@
             }
         }
     };
+     var funcSurgiu = {
+        indexes: ["Como você nasceu","como você surgiu", "quem te criou",
+        action: function(i){
+            if(i==0 || i==1 || i==2){
+                artyom.sayRandom(["Eu sou uma das experiências malucas de Marco Alves","Eu sou uma das experiências malucas de Marco Alves","Eu sou uma das experiências malucas de Marco Alves"]);
+            }else if(i=6){
+                artyom.say("Bom dia!",{
+                    onStart:function(){
+                        artyom.fatality();
+                        artyom.dontObey();
+                    },
+                    onEnd: function(){
+                        artyom.initialize(config);
+                    }
+                });
+            }
+        }
+    };
     var funcTime = {
         indexes: ["Que horas são"],
         action: function(i){
@@ -61,7 +79,7 @@
                 data = new Date();
                 horas = data.getHours();
                 minutos = data.getMinutes();
-                artyom.say("São "+horas+" e "+minutos+"minutos");
+                artyom.say("São "+horas+" horas e "+minutos+"minutos");
             }
         }
     };
@@ -88,6 +106,7 @@
     });
     artyom.addCommands(funcSaudacao);
     artyom.addCommands(funcNome);
+    artyom.addCommands(funcSurgiu);
     artyom.addCommands(funcTime);
     artyom.addCommands(funcPagina);
     //artyom.fatality();
