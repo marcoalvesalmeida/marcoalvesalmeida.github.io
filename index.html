@@ -2,12 +2,16 @@
 <head>
     <title>Ass. Vitual</title>
     <script src="artyom.js"></script>
+    <script src="artyom.window.js"></script>
 </head>
 <body>
 <span id="textout">
 
 </span>
 <script>
+    var Jarvis = new Artyom();
+
+    Jarvis.say("Hello World !");
     var config = {
         lang:'pt',
         continuous: true,
