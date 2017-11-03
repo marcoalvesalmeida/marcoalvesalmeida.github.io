@@ -75,7 +75,7 @@
         indexes: ["Como você nasceu","como você surgiu", "quem te criou"],
         action: function(i){
             if(i==0 || i==1 || i==2){
-                artyom.sayRandom(["Eu sou uma das experiências malucas de Marco Alves","Eu sou uma das experiências malucas de Marco Alves","Eu sou uma das experiências malucas de Marco Alves"]);
+                artyom.say("Eu sou uma das experiências malucas de Marco Alves");
             }else if(i=6){
                 artyom.say("Bom dia!",{
                     onStart:function(){
@@ -121,11 +121,13 @@
         }
     };
     var funcMusica = {
-        indexes: ["Toque uma música"],
+        indexes: ["Toque uma música internacional","Toque uma música nacional"],
         action: function(i){
+            artyom.say("Vou tocar a sua preferida!");
             if(i==0){
-                artyom.say("Vou tocar a sua preferida!");
                 window.open("https://www.youtube.com/watch?v=1w7OgIMMRc4","_blank");
+            }else{
+                 window.open("https://www.youtube.com/watch?v=fJqXCFJ_doM","_blank");
             }
         }
     };
