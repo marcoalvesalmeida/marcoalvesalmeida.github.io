@@ -112,6 +112,23 @@
             }
         }
     };
+    var funcPiada = {
+        indexes: ["Me conte uma piada"],
+        action: function(i){
+            if(i==0){
+                artyom.say("Sabe o que a pedra disse para o peixe? Naadaa kkkk");
+            }
+        }
+    };
+    var funcMusica = {
+        indexes: ["Toque uma música"],
+        action: function(i){
+            if(i==0){
+                artyom.say("Vou tocar a sua preferida!");
+                window.open("https://www.youtube.com/watch?v=1w7OgIMMRc4","_blank");
+            }
+        }
+    };
     var funcPagina = {
         indexes: ["Abra meu *"],
         smart:true,
@@ -138,6 +155,8 @@
     artyom.addCommands(funcSurgiu);
     artyom.addCommands(funcTime);
     artyom.addCommands(funcDate);
+    artyom.addCommands(funcPiada);
+    artyom.addCommands(funcMusica);
     artyom.addCommands(funcPagina);
     //artyom.fatality();
 </script>
