@@ -40,16 +40,6 @@
         action: function(i){
             if(i==0){
                 artyom.sayRandom(["Oi","Tudo ok","Estava te esperando Marco"]);
-            }else if(i==1){
-                artyom.say("Bom dia!",{
-                    onStart:function(){
-                        artyom.fatality();
-                        artyom.dontObey();
-                    },
-                    onEnd: function(){
-                        artyom.initialize(config);
-                    }
-                });
             }
         }
     };
@@ -58,16 +48,6 @@
         action: function(i){
             if(i==0 || i==1 || i==2 || i==3){
                 artyom.sayRandom(["Eu sou a Samantha","As pessoas me chamam de Samantha","Bond, Samantha Bond"]);
-            }else if(i=6){
-                artyom.say("Bom dia!",{
-                    onStart:function(){
-                        artyom.fatality();
-                        artyom.dontObey();
-                    },
-                    onEnd: function(){
-                        artyom.initialize(config);
-                    }
-                });
             }
         }
     };
@@ -76,16 +56,6 @@
         action: function(i){
             if(i==0 || i==1 || i==2){
                 artyom.say("Eu sou uma das experiências malucas de Marco Alves");
-            }else if(i=6){
-                artyom.say("Bom dia!",{
-                    onStart:function(){
-                        artyom.fatality();
-                        artyom.dontObey();
-                    },
-                    onEnd: function(){
-                        artyom.initialize(config);
-                    }
-                });
             }
         }
     };
