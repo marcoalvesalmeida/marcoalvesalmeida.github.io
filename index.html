@@ -101,6 +101,18 @@
             }
         }
     };
+     var funcPesqYoutube = {
+        indexes: ["Pesquise no youtube *","Pesquisar no youtube *","Busque no youtube *","Buscar no youtube *","Pesquisa no youtube *","Busca no youtube *"],
+        smart:true,
+        action: function(i, str){
+			if(str != ""){
+				var str2 = "https://www.youtube.com/results?search_query=";
+				str2 = str2.concat(str);
+				artyom.say("Pesquisando");
+				window.open(str2,"_blank");
+			}
+        }
+    };
     var funcPagina = {
         indexes: ["Abra meu *"],
         smart:true,
@@ -129,6 +141,7 @@
     artyom.addCommands(funcDate);
     artyom.addCommands(funcPiada);
     artyom.addCommands(funcMusica);
+    artyom.addCommands(funcYoutube);
     artyom.addCommands(funcPagina);
     //artyom.fatality();
 </script>
